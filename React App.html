@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body {
+    margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #003;
+  padding-top: 50px;
+  color: white;
+  text-align: center;
+}
+
+</style><style type="text/css">.Cell {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(33, 25, 54);
+}
+
+.Cell-lit {
+  background-color: rgb(99, 86, 218);
+}</style><style type="text/css">.Board {
+  margin: 0 auto;
+box-shadow: 20px -11px 19px 8px rgba(255,214,255,1);
+}
+
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+.Board-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neon-orange {
+  font-family: neon;
+  color: #FB4264;
+  font-size: 100px;
+  text-shadow: 0 0 3vw #F40A35;
+  animation: neon-orange 1s ease infinite;
+  -moz-animation: neon-orange 1s ease infinite;
+  -webkit-animation: neon-orange 1s ease infinite;
+}
+
+.neon-blue {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 100px;
+  text-shadow: 0 0 3vw #2356FF;
+  animation: neon-blue 2s linear infinite;
+  -moz-animation: neon-blue 2s linear infinite;
+  -webkit-animation: neon-blue 2s linear infinite;
+  -o-animation: neon-blue 2s linear infinite;
+}
+
+
+
+@-webkit-keyframes neon-orange {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+
+
+
+@keyframes neon-orange {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+
+
+@-webkit-keyframes neon-blue {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
+
+
+@keyframes neon-blue {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
+</style><style type="text/css">.App {
+  text-align: center;
+}
+
+.App-logo {
+  -webkit-animation: App-logo-spin infinite 20s linear;
+          animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+</style><script charset="utf-8" src="./React App_files/main.b9de5b6b022495b9e88d.hot-update.js.download"></script><script charset="utf-8" src="./React App_files/main.6612265e3c72860065e8.hot-update.js.download"></script><script charset="utf-8" src="./React App_files/main.cf10a97cff6af2998250.hot-update.js.download"></script><script charset="utf-8" src="./React App_files/main.e8e672b3cc3165a288ae.hot-update.js.download"></script><script charset="utf-8" src="./React App_files/main.704b2e063af6a0b01877.hot-update.js.download"></script><script charset="utf-8" src="./React App_files/main.98be2655891e00b5a3b7.hot-update.js.download"></script></head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"><div class="App"><div><div class="Board-title"><div class="neon-orange">SWITCH</div><div class="neon-blue">-</div><div class="neon-orange">-</div><div class="neon-blue">BOXES</div></div><table class="Board"><tbody><tr><td class="Cell Cell-lit"></td><td class="Cell"></td><td class="Cell Cell-lit"></td><td class="Cell Cell-lit"></td><td class="Cell Cell-lit"></td></tr><tr><td class="Cell"></td><td class="Cell"></td><td class="Cell Cell-lit"></td><td class="Cell"></td><td class="Cell"></td></tr><tr><td class="Cell Cell-lit"></td><td class="Cell"></td><td class="Cell Cell-lit"></td><td class="Cell"></td><td class="Cell Cell-lit"></td></tr><tr><td class="Cell Cell-lit"></td><td class="Cell"></td><td class="Cell"></td><td class="Cell"></td><td class="Cell Cell-lit"></td></tr><tr><td class="Cell Cell-lit"></td><td class="Cell"></td><td class="Cell Cell-lit"></td><td class="Cell"></td><td class="Cell Cell-lit"></td></tr></tbody></table></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js.download"></script><script src="./React App_files/1.chunk.js.download"></script><script src="./React App_files/main.chunk.js.download"></script><script src="./React App_files/main.d9d71b98be54cafa9b8e.hot-update.js.download"></script>
+
+</body></html>
